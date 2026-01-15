@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Personal Website</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+      position: relative;
+    }
+    
+
+    header {
+      text-align: center;
+      padding: 80px 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      opacity: 0.8;
+    }
+
+    .glow {
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #fff; }
+      to { text-shadow: 0 0 20px #fff, 0 0 30px #00f; }
+    }
+
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      border: 2px solid #fff;
+      color: #fff;
+      background: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      opacity: 0.6;
+      font-size: 0.9rem;
+    }
+      /* New Animations */
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-12px); }
+      100% { transform: translateY(0px); }
+    }
+
+    @keyframes gradientText {
+      0% { color: #ffffff; }
+      50% { color: #00bfff; }
+      100% { color: #ffffff; }
+    }
+
+    .floating-img {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .animated-title {
+      animation: gradientText 3s infinite;
+    }
+      /* Cherry Blossom Animation */
+    .petal {
+      position: fixed;
+      top: -10px;
+      background: rgb(10, 133, 215);
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: fall 8s linear infinite;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0) rotate(0deg); }
+      100% { transform: translateY(120vh) rotate(360deg); }
+    }
+
+    /* Glowing Border for Photo */
+    .glow-border {
+      border: 4px solid #fff;
+      box-shadow: 0 0 20px #ff66cc, 0 0 40px #ff3399;
+      border-radius: 15px;
+      animation: glowPulse 2s infinite alternate;
+    }
+
+    @keyframes glowPulse {
+      from { box-shadow: 0 0 20px #ff66cc; }
+      to { box-shadow: 0 0 40px #ff3399; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Anime Video Background -->
+  <video autoplay loop muted playsinline id="bgVideo" style="position:fixed;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:-2;">
+    <source src="D:\my site\background.mp4" type="video/mp4">
+  </video>
+  <header>
+    <div style="display:flex;justify-content:center;align-items:center;gap:40px;flex-wrap:wrap;">
+      <img src="D:\my site\valorant.png" alt="Valorant" style="width:90px;animation:float 3s infinite;">
+      <img src="D:\my site\free fire.png" alt="Free Fire" style="width:90px;animation:float 3s infinite;">
+      <div style="text-align:center;">
+        <h1 class="glow animated-title">Shiva Jayswal</h1>
+        <p>Welcome to my personal website</p>
+         <img src="D:\my site\my logo.jpg" class="floating-img glow-border" alt="My Photo" class="floating-img" style="width:180px;border-radius:12px;margin-top:20px;" />
+      </div>
+      <img src="D:\my site\gta.jpg" alt="GTA 5" style="width:90px;animation:float 3s infinite;">
+      <img src="D:\my site\minecraft.jpg" alt="Minecraft" style="width:90px;animation:float 3s infinite;">
+    </div>
+  </header>
+
+  <div class="section">
+    <h2>About Me</h2>
+    <p>Hello! I'm Shiva Jayswal. This is my personal animated website. Feel free to explore!</p>
+    <p>Email: shivajayswal605@gmail.com</p>
+    <p>Facebook: Shiva Jayswal</p>
+  </div>
+
+  <div class="section">
+    <h2>Projects</h2>
+    <p>Here are some cool things I'm working on.</p>
+    <a class="btn" href="#">See More</a>
+  </div>
+
+  <footer>
+    © 2025 My Website — All Rights Reserved
+  </footer>
+
+  <div class="section" style="padding-bottom:100px;">
+    <h2>Favorite Games</h2>
+    <p>Some of the games I like:</p>
+    <div style="display:flex;justify-content:center;gap:40px;margin-top:30px;flex-wrap:wrap;">
+      <img src="D:\my site\valorant.png" alt="Valorant" style="width:120px;animation:float 3s infinite;">
+      <img src="D:\my site\free fire.png" alt="Free Fire" style="width:120px;animation:float 3s infinite;">
+      <img src="D:\my site\gta.jpg" alt="GTA 5" style="width:120px;animation:float 3s infinite;">
+    </div>
+  </div>
+  <!-- Music Button -->
+  <button onclick="toggleMusic()" style="position:fixed;bottom:20px;left:20px;padding:12px 20px;border:none;border-radius:10px;background:#ff66cc;color:white;font-size:1rem;cursor:pointer;z-index:10;">🎵 Anime Music</button>
+  <audio id="bgMusic" loop>
+    <source src="matsukaphonk.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    function toggleMusic() {
+      const music = document.getElementById('bgMusic');
+      if (music.paused) music.play(); else music.pause();
+    }
+
+    // Generate falling petals
+    for (let i = 0; i < 25; i++) {
+      let petal = document.createElement('div');
+      petal.classList.add('petal');
+      petal.style.left = Math.random() * 100 + 'vw';
+      petal.style.animationDelay = Math.random() * 5 + 's';
+      petal.style.opacity = Math.random();
+      document.body.appendChild(petal);
+    }
+  </script>
+</body>
+</html>
